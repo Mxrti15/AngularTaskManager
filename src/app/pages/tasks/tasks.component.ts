@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-
+  title = 'Gestión de Tareas';
 }
