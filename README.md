@@ -16,3 +16,6 @@ Entramos al proyecto
 cd angular-task-manager
 Ejecutamos el servidor
 ng serve
+
+Generar componentes
+ng generate component pages/home
