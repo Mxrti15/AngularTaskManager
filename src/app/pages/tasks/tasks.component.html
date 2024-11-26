@@ -1,5 +1,25 @@
 <div class="tasks">
-    <h1>{{ title }}</h1>
+    <h1>{{ titleComponent }}</h1>
     <p>Aquí podrás ver, agregar y administrar tus tareas.</p>
-</div>
+  
+    <!-- En caso de no haber tareas -->
+    <p *ngIf="tasks.length === 0">No tienes tareas pendientes</p>
+  
+    <!-- Lista de tareas -->
+    <ul>
+      <li *ngFor="let task of tasks">
+        <!-- Checkbox para marcar tarea como completada -->
+        <input 
+          type="checkbox" 
+          [checked]="task.completed" 
+          (change)="toggleTaskCompletion(task.id)">
+  
+        <!-- Título de la tarea -->
+        {{ task.title }}
+  
+        <!-- Botón para eliminar tarea -->
+        <button (click)="deleteTask(task.id)">Eliminar</button>
+      </li>
+    </ul>
+  </div>
   

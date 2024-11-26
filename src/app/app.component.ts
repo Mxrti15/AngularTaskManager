@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes'; // Importa las rutas definidas
+import { HomeComponent } from './pages/home/home.component';
+import { TasksComponent } from './pages/tasks/tasks.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterModule],  // Importa RouterModule para el enrutamiento
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
   title = 'angular-task-manager';
 }

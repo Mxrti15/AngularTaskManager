@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  title = 'Bienvenido a Task Manager';
+  title = 'Bienvenido a Task Manager!';
 }
