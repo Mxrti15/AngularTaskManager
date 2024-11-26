@@ -19,3 +19,4 @@ ng serve
 
 Generar componentes
 ng generate component pages/home
+
