@@ -2,16 +2,25 @@
 
 # Compiled output
 /dist
+/build
 /tmp
 /out-tsc
 /bazel-out
 
+# Angular build artifacts
+.angular/
+
+# TypeScript compiled files
+*.tsbuildinfo
+
 # Node
 /node_modules
+node_modules/
 npm-debug.log
 yarn-error.log
 
 # IDEs and editors
+
 .idea/
 .project
 .classpath
@@ -22,6 +31,7 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -40,3 +50,36 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment files (si no son específicos de la configuración local)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Test coverage
+coverage/
+
+# Temporary folders
+tmp/
+temp/
+
+# Angular CLI cache
+.angular-cache/
+
+# OS generated files
+ehthumbs.db
+Desktop.ini
+
+# Important files to be included
+!.editorconfig
+!angular.json
+!package.json
+!package-lock.json
+!README.md
+!tsconfig.app.json
+!tsconfig.json
+!tsconfig.spec.json

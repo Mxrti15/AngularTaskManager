@@ -7,6 +7,14 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<nav>
+  <a routerLink="/">Inicio</a>
+  <a routerLink="/tasks">Tareas</a>
+  <a routerLink="/profile">Perfil</a>
+</nav>
+<hr>
+<router-outlet></router-outlet> <!-- Aquí se renderizarán los componentes según la ruta -->
+
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
