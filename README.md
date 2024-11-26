@@ -19,3 +19,6 @@ ng serve
 
 Generar componentes
 ng generate component pages/home
+
+Generar servicio
+ng generate service task
