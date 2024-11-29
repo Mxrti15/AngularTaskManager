@@ -22,7 +22,7 @@ export class TaskService {
   //Task es el modelo/objeto
   addTask(title: string): void{
     const newTask: Task = {
-      id: this.tasks.length + 1, // Generar un ID simple (podrías usar una librería como uuid)
+      id: this.tasks.length + 1, // Generar un ID simple (poemos usar una librería como uuid)
       title,
       completed: false
     };

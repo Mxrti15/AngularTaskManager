@@ -1,7 +1,17 @@
 <div class="tasks">
     <h1>{{ titleComponent }}</h1>
     <p>Aquí podrás ver, agregar y administrar tus tareas.</p>
-  
+
+    <!-- Formulario para agregar tarea -->
+    <div>
+      <!-- ngModel es lo mismo que value + input -->
+      <input 
+        type="text"
+        [(ngModel)]="newTaskTitle"
+        placeholder="Nueva Tarea"/>
+      <button (click)="addTask()">Agregar tarea</button>
+    </div>
+
     <!-- En caso de no haber tareas -->
     <p *ngIf="tasks.length === 0">No tienes tareas pendientes</p>
   

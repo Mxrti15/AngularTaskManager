@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../task.service'; // Importamos el servicio de tareas
 import { Task } from '../../task.model'; // Importamos el modelo Task
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tasks',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })
@@ -22,6 +23,7 @@ export class TasksComponent implements OnInit {
   //usamos ngOnInit para cargar la lista de tareas desde el servicio cuando carga el componente
   ngOnInit(): void {
     // Cuando se carga el componente, obtenemos la lista de tareas
+    // Actualiza la lista
     this.tasks = this.taskService.getTasks();
   }
 

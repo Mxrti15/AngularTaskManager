@@ -8,7 +8,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule],  // Importa RouterModule para el enrutamiento
+  imports: [RouterModule, ProfileComponent],  // Importa RouterModule para el enrutamiento
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

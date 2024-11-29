@@ -1,6 +1,35 @@
 <div class="profile">
     <h1>{{ title }}</h1>
     <p>Administra la información de tu perfil.</p>
+
+    <!-- Vista del perfil -->
+    <!-- si no le damos a ediar -->
+  <div *ngIf="!editar">
+    <p><strong>Nombre:</strong> {{ profile.name }}</p>
+    <p><strong>Email:</strong> {{ profile.email }}</p>
+    <p><strong>Biografía:</strong> {{ profile.bio }}</p>
+    <button (click)="toggleProfileEdit()">Editar Perfil</button>
+    <button (click)="resetProfile()">Restablecer Perfil</button>
+  </div>
+
+  <!-- Modo edición -->
+  <div *ngIf="editar">
+    <label>
+      Nombre:
+      <input type="text" [(ngModel)]="profile.name" />
+    </label>
+    <label>
+      Email:
+      <input type="email" [(ngModel)]="profile.email" />
+    </label>
+    <label>
+      Biografía:
+      <textarea [(ngModel)]="profile.bio"></textarea>
+    </label>
+    <button (click)="saveProfile()">Guardar</button>
+    <button (click)="toggleProfileEdit()">Cancelar</button>
+  </div>
+
 </div>
   
   
