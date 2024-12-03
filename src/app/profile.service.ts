@@ -27,7 +27,6 @@ export class ProfileService {
    * con una copia del perfil actualizado, asegurando que los cambios sean inmutables.
    */
 
-
   //Actualiza el perfil
   updateProfile(updatedProfile: Profile):void{
     this.profile = { ...updatedProfile }; // Actualiza `profile` con una copia del perfil actualizado.
