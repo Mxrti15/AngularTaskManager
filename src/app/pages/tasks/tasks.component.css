@@ -1,0 +1,113 @@
+/* Contenedor principal */
+.tasks {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Título */
+  .tasks h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Descripción */
+  .tasks p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  /* Formulario */
+  .tasks div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .tasks input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .tasks button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tasks button:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Lista de tareas */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    cursor: grab;
+  }
+  
+  li:active {
+    cursor: grabbing;
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  li.drag-over {
+    border: 2px dashed #5cb85c;
+    background-color: #f0f9f0;
+  }
+  
+  /* Botones dentro de las tareas */
+  li button {
+    padding: 5px 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  li button:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Checkbox */
+  li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Mensaje cuando no hay tareas */
+  .tasks p[ng-reflect-ng-if] {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+  }
+  

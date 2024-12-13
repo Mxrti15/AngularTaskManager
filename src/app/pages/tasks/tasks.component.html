@@ -17,7 +17,21 @@
   
     <!-- Lista de tareas -->
     <ul>
-      <li *ngFor="let task of tasks">
+      <!-- 
+      Este <li> tiene varias funcionalidades:
+      - Es parte de una lista generada dinámicamente con *ngFor que itera sobre las tareas.
+      - Soporta el arrastre (drag & drop) gracias a los atributos:
+        - draggable="true" permite que el elemento sea arrastrable.
+        - (dragstart) captura el índice de la tarea que se está arrastrando.
+        - (dragover) evita el comportamiento predeterminado para permitir el evento "drop".
+        - (drop) actualiza la posición de las tareas tras soltar el elemento.
+      -->
+      <li *ngFor="let task of tasks; let i = index"
+        draggable="true" 
+        (dragstart)="onDragStart(i)" 
+        (dragover)="onDragOver($event)" 
+        (drop)="onDrop(i)">
+      =
         <!-- Checkbox para marcar tarea como completada -->
         <input 
           type="checkbox" 

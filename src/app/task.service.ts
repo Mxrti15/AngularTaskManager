@@ -42,6 +42,21 @@ export class TaskService {
     }
   }
 
+  /**
+   * Actualiza el orden de las tareas en el componente.
+   *
+   * @param {Task[]} newOrder - Un array que contiene las tareas en el nuevo orden deseado.
+   *
+   * Esta función reemplaza el array `tasks` actual con una copia del nuevo orden
+   * proporcionado en `newOrder`. El uso de `[...newOrder]` asegura que se crea un 
+   * nuevo array y no una referencia directa al array original, para evitar 
+   * modificaciones no deseadas por referencia.
+   */
+  updateTaskOrder(newOrder: Task[]): void {
+    this.tasks = [...newOrder]; // Se crea una copia del nuevo orden
+  }
+  
+
   
   //constructor() { }
 }
